@@ -21,6 +21,13 @@ span
 {
     background-color: rgb(252, 252, 252);
 }
+.btn-design
+{
+    color:white;
+    background-color: rgb(8, 0, 1);
+    border-radius: 5px;
+    padding: 7px;
+}
 #count-phone
 {
     display: inline;
