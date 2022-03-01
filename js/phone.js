@@ -1,5 +1,5 @@
 const detailsDiv=document.getElementById('details-div');
-
+const mainDiv=document.getElementById('main-div')
 // Search Button to fetch data
 document.getElementById('search-button').addEventListener('click',function()
 {
@@ -16,11 +16,14 @@ const displayPhone=(collectData)=>
   if(collectData.length==0)
   {
     alert('Please Enter Valid String')
+    document.getElementById('count-phone').innerText='0';
+    mainDiv.innerHTML=''
+    detailsDiv.innerHTML=''
   }
   // Show data one by one in content
   else
   {
-  const mainDiv=document.getElementById('main-div')
+ 
   const first20Mobile=collectData.slice(1,21);
   mainDiv.innerHTML=''
   detailsDiv.innerHTML=''
@@ -69,7 +72,7 @@ const getDetailsById=(collectSlug)=>
           <p class="card-text"><span>Release Date:</span>${collectSlug.releaseDate? collectSlug.releaseDate:'No result found'}</p>
           </div>
           <div class="mt-2">
-          <h5><span>Main Features</span></h5>
+          <h5><span>Main Features<span></h5>
           <p class="card-text"><span>Storage:</span>${collectSlug.mainFeatures.storage}</p>
           <p class="card-text"><span>DisplaySize:</span>${collectSlug.mainFeatures.displaySize}</p>
           <p class="card-text"><span>Chip Set:</span>${collectSlug.mainFeatures.chipSet}</p>
