@@ -47,7 +47,7 @@ const displayPhone=(collectData)=>
           
           mainDiv.appendChild(div)
           document.getElementById('count-phone').innerText=count;
-         
+          console.log(newdata.phone_name)
     })
   }
  
@@ -61,7 +61,7 @@ const getId=(collectId)=>
 }
 const getDetailsById=(collectSlug)=>
 {
-      
+          
           const createDiv=document.createElement('div');
           detailsDiv.innerHTML=''
           createDiv.innerHTML=`
@@ -82,12 +82,12 @@ const getDetailsById=(collectSlug)=>
           </div>
           <div class="mt-3">
           <h5><span class="border-bottom border-success" >Others:</span></h5>
-          <p class="card-text"><span>WLAN:</span>${collectSlug.others?.WLAN??"No"}</p>
-          <p class="card-text"><span>Bluetooth:</span>${collectSlug.others?.Bluetooth??"No"}</p>
-          <p class="card-text"><span>GPS:</span>${collectSlug.others?.GPS??"No"}</p>
-          <p class="card-text"><span>NFC:</span>${collectSlug.others?.NFC??"No"}</p>
-          <p class="card-text"><span>Radio:</span>${collectSlug.others?.Radio??"No"}</p>
-          <p class="card-text"><span>USB:</span>${collectSlug.others?.USB??"No"}</p>
+          <p class="card-text"><span>WLAN:</span>${collectSlug.others?.WLAN? collectSlug.others.WLAN:'No'}</p>
+          <p class="card-text"><span>Bluetooth:</span>${collectSlug.others?.Bluetooth? collectSlug.others.Bluetooth:"No"}</p>
+          <p class="card-text"><span>GPS:</span>${collectSlug.others?.GPS? collectSlug.others.GPS:'No'}</p>
+          <p class="card-text"><span>NFC:</span>${collectSlug.others?.NFC? collectSlug.others.NFC:'No'}</p>
+          <p class="card-text"><span>Radio:</span>${collectSlug.others?.Radio? collectSlug.others.Radio:'No'}</p>
+          <p class="card-text"><span>USB:</span>${collectSlug.others?.USB? collectSlug.others.USB:'No'}</p>
           </div>
           </div>
           </div>
