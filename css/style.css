@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+
+
+body
+{
+    font-family: 'Poppins', sans-serif;
+}
+span
+{
+    font-weight: bold;
+    display: block;
+}
+.card-color
+{
+    background-color: rgb(252, 252, 252);
+}
+#count-phone
+{
+    display: inline;
+}
