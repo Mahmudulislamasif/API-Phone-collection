@@ -1,6 +1,6 @@
 const detailsDiv=document.getElementById('details-div');
 
-
+// Search Button to fetch data
 document.getElementById('search-button').addEventListener('click',function()
 {
     const searchText=document.getElementById('search-text');
@@ -9,12 +9,15 @@ document.getElementById('search-button').addEventListener('click',function()
     .then(response=>response.json())
     .then(data=>displayPhone(data.data))
 })
+// Function for search button
 const displayPhone=(collectData)=>
 {
+  // Error handle for unexpected input
   if(collectData.length==0)
   {
     alert('Please Enter Valid String')
   }
+  // Show data one by one in content
   else
   {
   const mainDiv=document.getElementById('main-div')
