@@ -8,6 +8,7 @@ document.getElementById('search-button').addEventListener('click',function()
     fetch(`https://openapi.programming-hero.com/api/phones?search=${searchTextValue}`)
     .then(response=>response.json())
     .then(data=>displayPhone(data.data))
+    searchText.value=''
 })
 // Function for search button
 const displayPhone=(collectData)=>

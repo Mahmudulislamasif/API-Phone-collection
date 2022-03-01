@@ -5,6 +5,12 @@ body
 {
     font-family: 'Poppins', sans-serif;
 }
+.top-headings
+{
+    margin-top: 15px;
+    color:purple;
+    
+}
 span
 {
     font-weight: bold;
