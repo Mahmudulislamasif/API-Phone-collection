@@ -25,25 +25,26 @@ const displayPhone=(collectData)=>
   mainDiv.innerHTML=''
   detailsDiv.innerHTML=''
   let count=0;
-  for(const newdata of first20Mobile)
-  {  
-      const div=document.createElement('div');
-      div.classList.add('col-12','col-md-4')
-      div.innerHTML=`
-      <div class="card shadow-lg rounded card-color" style="width: 18rem;">
-      <img src="${newdata.image}" class="card-img-top w-50 mx-auto m-3" alt="...">
-      <div class="card-body">
-          <p class="card-text"><span>Brand:</span> ${newdata.brand}</p>
-          <p class="card-text"><span>Phone Name:</span> ${newdata.phone_name}</p>
-          <button class="btn btn-primary" onclick="getId('${newdata.slug}')">See details</button>
-      </div>
-     </div>
-      `
-      count++
-      
-      mainDiv.appendChild(div)
-      document.getElementById('count-phone').innerText=count;
-     }  
+  first20Mobile.forEach(newdata=>
+    {
+          const div=document.createElement('div');
+          div.classList.add('col-12','col-md-4')
+          div.innerHTML=`
+          <div class="card shadow-lg rounded card-color" style="width: 18rem;">
+          <img src="${newdata.image}" class="card-img-top w-50 mx-auto m-3" alt="...">
+          <div class="card-body">
+              <p class="card-text"><span>Brand:</span> ${newdata.brand}</p>
+              <p class="card-text"><span>Phone Name:</span> ${newdata.phone_name}</p>
+              <button class="btn btn-primary" onclick="getId('${newdata.slug}')">See details</button>
+          </div>
+         </div>
+          `
+          count++
+          
+          mainDiv.appendChild(div)
+          document.getElementById('count-phone').innerText=count;
+         
+    })
   }
  
   }
