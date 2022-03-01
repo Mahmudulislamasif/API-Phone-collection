@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
 
-
+/* font for body  */
 body
 {
     font-family: 'Poppins', sans-serif;
@@ -10,6 +10,7 @@ span
     font-weight: bold;
     display: block;
 }
+/* Change color of card */
 .card-color
 {
     background-color: rgb(252, 252, 252);
