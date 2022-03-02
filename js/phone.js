@@ -14,7 +14,7 @@ document.getElementById('search-button').addEventListener('click',function()
 // Function for search button
 const displayPhone=(collectData)=>
 {
-  console.log(collectData.phone_name)
+  
   // Error handle for unexpected input
   if(collectData.length==0)
   {
