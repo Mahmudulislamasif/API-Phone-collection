@@ -42,7 +42,7 @@ const displayPhone=(collectData)=>
           <img src="${newdata.image}" class="card-img-top w-50 mx-auto m-3" alt="...">
           <div class="card-body">
               <p class="card-text"><span>Brand:</span> ${newdata.brand}</p>
-              <p class="card-text"><span>Phone Name:</span> ${newdata.phone_name}</p>
+              <p class="card-text"><span>Name:</span> ${newdata.phone_name}</p>
               <button class="btn-design" onclick="getId('${newdata.slug}')">See details</button>
           </div>
          </div>
