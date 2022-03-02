@@ -9,10 +9,12 @@ document.getElementById('search-button').addEventListener('click',function()
     .then(response=>response.json())
     .then(data=>displayPhone(data.data))
     searchText.value=''
+    
 })
 // Function for search button
 const displayPhone=(collectData)=>
 {
+  console.log(collectData.phone_name)
   // Error handle for unexpected input
   if(collectData.length==0)
   {
@@ -24,13 +26,15 @@ const displayPhone=(collectData)=>
   // Show data one by one in content
   else
   {
- 
-  const first20Mobile=collectData.slice(1,21);
+  // const first20Mobile=collectData.slice(1,21);
   mainDiv.innerHTML=''
   detailsDiv.innerHTML=''
   let count=0;
-  first20Mobile.forEach(newdata=>
+  collectData.forEach(newdata=>
     {
+         
+         if(count<20){
+
           const div=document.createElement('div');
           div.classList.add('col-12','col-md-4')
           div.innerHTML=`
@@ -47,7 +51,7 @@ const displayPhone=(collectData)=>
           
           mainDiv.appendChild(div)
           document.getElementById('count-phone').innerText=count;
-          console.log(newdata.phone_name)
+         } 
     })
   }
  
@@ -61,7 +65,6 @@ const getId=(collectId)=>
 }
 const getDetailsById=(collectSlug)=>
 {
-          
           const createDiv=document.createElement('div');
           detailsDiv.innerHTML=''
           createDiv.innerHTML=`
@@ -82,12 +85,12 @@ const getDetailsById=(collectSlug)=>
           </div>
           <div class="mt-3">
           <h5><span class="border-bottom border-success" >Others:</span></h5>
-          <p class="card-text"><span>WLAN:</span>${collectSlug.others?.WLAN? collectSlug.others.WLAN:'No'}</p>
-          <p class="card-text"><span>Bluetooth:</span>${collectSlug.others?.Bluetooth? collectSlug.others.Bluetooth:"No"}</p>
-          <p class="card-text"><span>GPS:</span>${collectSlug.others?.GPS? collectSlug.others.GPS:'No'}</p>
-          <p class="card-text"><span>NFC:</span>${collectSlug.others?.NFC? collectSlug.others.NFC:'No'}</p>
-          <p class="card-text"><span>Radio:</span>${collectSlug.others?.Radio? collectSlug.others.Radio:'No'}</p>
-          <p class="card-text"><span>USB:</span>${collectSlug.others?.USB? collectSlug.others.USB:'No'}</p>
+          <p class="card-text"><span>WLAN:</span>${collectSlug.others?.WLAN?  collectSlug.others.WLAN:'No result'}</p>
+          <p class="card-text"><span>Bluetooth:</span>${collectSlug.others?.Bluetoot? collectSlug.others.Bluetoot:'No result'}</p> 
+          <p class="card-text"><span>GPS:</span>${collectSlug?.others?.GPS? collectSlug.others.GPS:'No result'}</p>
+          <p class="card-text"><span>NFC:</span>${collectSlug?.others?.NFC? collectSlug.others.NFC:'No result'}</p>
+          <p class="card-text"><span>Radio:</span>${collectSlug?.others?.Radio? collectSlug.others.Radio:'No result'}</p>
+          <p class="card-text"><span>USB:</span>${collectSlug?.others?.USB? collectSlug.others.USB:'No result'}</p>
           </div>
           </div>
           </div>
