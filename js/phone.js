@@ -73,7 +73,7 @@ const getDetailsById=(collectSlug)=>
           <div class="m-3">
           <div>
           <h5 class="card-text">${collectSlug.brand}</h5>
-          <p class="card-text"><span>Release Date:</span>${collectSlug.releaseDate? collectSlug.releaseDate:'No result found'}</p>
+          <p class="card-text"><span>Release Date:</span>${collectSlug.releaseDate? collectSlug.releaseDate:'No release date found'}</p>
           </div>
           <div class="mt-2">
           <h5><span class="border-bottom border-success" >Main Features<span></h5>
@@ -85,12 +85,12 @@ const getDetailsById=(collectSlug)=>
           </div>
           <div class="mt-3">
           <h5><span class="border-bottom border-success" >Others:</span></h5>
-          <p class="card-text"><span>WLAN:</span>${collectSlug.others?.WLAN?  collectSlug.others.WLAN:'No result'}</p>
-          <p class="card-text"><span>Bluetooth:</span>${collectSlug.others?.Bluetoot? collectSlug.others.Bluetoot:'No result'}</p> 
-          <p class="card-text"><span>GPS:</span>${collectSlug?.others?.GPS? collectSlug.others.GPS:'No result'}</p>
-          <p class="card-text"><span>NFC:</span>${collectSlug?.others?.NFC? collectSlug.others.NFC:'No result'}</p>
-          <p class="card-text"><span>Radio:</span>${collectSlug?.others?.Radio? collectSlug.others.Radio:'No result'}</p>
-          <p class="card-text"><span>USB:</span>${collectSlug?.others?.USB? collectSlug.others.USB:'No result'}</p>
+          <p class="card-text"><span>WLAN:</span>${collectSlug?.others?.WLAN?  collectSlug.others.WLAN:'No result found'}</p>
+          <p class="card-text"><span>Bluetooth:</span>${collectSlug?.others?.Bluetooth? collectSlug.others.Bluetooth:'No result found'}</p> 
+          <p class="card-text"><span>GPS:</span>${collectSlug?.others?.GPS? collectSlug.others.GPS:'No result found'}</p>
+          <p class="card-text"><span>NFC:</span>${collectSlug?.others?.NFC? collectSlug.others.NFC:'No result found'}</p>
+          <p class="card-text"><span>Radio:</span>${collectSlug?.others?.Radio? collectSlug.others.Radio:'No result found'}</p>
+          <p class="card-text"><span>USB:</span>${collectSlug?.others?.USB? collectSlug.others.USB:'No result found'}</p>
           </div>
           </div>
           </div>
